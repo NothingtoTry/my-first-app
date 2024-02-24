@@ -1,0 +1,18 @@
+
+
+<input type="text" [(ngModel)]="username" placeholder="Enter your username">
+<p>{{ username }}</p>
+<button (click)="resetUsername()" [disabled]="username === ''">Reset Username</button>
+
+  <h1>My Web App</h1>
+  <app-personal-info></app-personal-info>
+  <app-contact-info></app-contact-info>
+  <app-educational-background></app-educational-background>
+  <app-work-experience></app-work-experience>
+  <app-warning-alert2></app-warning-alert2>
+  <app-success-alert2></app-success-alert2>
+  <app-warning-alert></app-warning-alert>
+  <app-success-alert></app-success-alert>
+
+
+
