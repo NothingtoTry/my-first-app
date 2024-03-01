@@ -8,10 +8,17 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'my-first-app';
 
-  username: string = '';
 
-  resetUsername() {
-    this.username = '';
+  displayDetails = false;
+  logs: string[] = [];
+
+  toggleDetails() {
+    this.displayDetails = !this.displayDetails;
+    this.logs.push(`Button clicked at ${new Date().toLocaleTimeString()}`);
+
+
+    
   }
 }
+
 

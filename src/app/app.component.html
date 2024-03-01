@@ -1,8 +1,12 @@
 
 
-<input type="text" [(ngModel)]="username" placeholder="Enter your username">
-<p>{{ username }}</p>
-<button (click)="resetUsername()" [disabled]="username === ''">Reset Username</button>
+<button (click)="toggleDetails()">Display Details</button>
+
+<p *ngIf="displayDetails">Testing</p>
+
+<ul>
+  <li *ngFor="let log of logs; let i = index" [ngStyle]="{ 'background-color': i >= 4 ? 'blue' : 'transparent' }" [ngClass]="{ 'white-text': i >= 4 }">{{ log }}</li>
+</ul>
 
   <h1>My Web App</h1>
   <app-personal-info></app-personal-info>
