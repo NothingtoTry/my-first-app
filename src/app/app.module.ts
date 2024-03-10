@@ -11,9 +11,16 @@ import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { SuccessAlert2Component } from './success-alert2/success-alert2.component';
 import { WarningAlert2Component } from './warning-alert2/warning-alert2.component';
+import { GameControlComponent } from './game-control/game-control.component';
+import { CommonModule } from '@angular/common';
+import { OddComponent } from './odd/odd.component';
+import { EvenComponent } from './even/even.component';
 
 @NgModule({
   declarations: [
+    EvenComponent, 
+    OddComponent,
+    GameControlComponent,
     AppComponent,
     PersonalInfoComponent,
     ContactInfoComponent,
@@ -22,12 +29,16 @@ import { WarningAlert2Component } from './warning-alert2/warning-alert2.componen
     WarningAlertComponent,
     SuccessAlertComponent,
     SuccessAlert2Component,
-    WarningAlert2Component
+    WarningAlert2Component,
+    
+
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

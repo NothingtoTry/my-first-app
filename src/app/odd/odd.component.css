@@ -1,0 +1,9 @@
+/* odd.component.css */
+p.odd {
+  color: red;
+}
+
+/* even.component.css */
+p.even {
+  color: blue;
+}

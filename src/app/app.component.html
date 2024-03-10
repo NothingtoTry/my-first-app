@@ -1,6 +1,21 @@
+<div>
+  <app-game-control (numberGenerated)="onNumberGenerated($event)"></app-game-control>
+</div>
+
+<div *ngIf="oddNumbers.length > 0">
+  <h2>Odd Numbers:</h2>
+  <app-odd *ngFor="let number of oddNumbers" [number]="number"></app-odd>
+</div>
+
+<div *ngIf="evenNumbers.length > 0">
+  <h2>Even Numbers:</h2>
+  <app-even *ngFor="let number of evenNumbers" [number]="number"></app-even>
+</div>
+
+ <!--
+  <button (click)="toggleDetails()">Display Details</button>
 
 
-<button (click)="toggleDetails()">Display Details</button>
 
 <p *ngIf="displayDetails">Testing</p>
 
@@ -17,6 +32,9 @@
   <app-success-alert2></app-success-alert2>
   <app-warning-alert></app-warning-alert>
   <app-success-alert></app-success-alert>
+
+-->
+
 
 
 

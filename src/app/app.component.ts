@@ -6,15 +6,20 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'my-first-app';
 
+  oddNumbers: number[] = [];
+  evenNumbers: number[] = [];
 
-  displayDetails = false;
-  logs: string[] = [];
+  onNumberGenerated(number: number) {
+    if (number % 2 === 0) {
+      this.evenNumbers.push(number);
+    } else {
+      this.oddNumbers.push(number);
+    }
 
-  toggleDetails() {
-    this.displayDetails = !this.displayDetails;
-    this.logs.push(`Button clicked at ${new Date().toLocaleTimeString()}`);
+// toggleDetails() {
+    //this.displayDetails = !this.displayDetails;
+    //this.logs.push(`Button clicked at ${new Date().toLocaleTimeString()}`);
 
 
     
